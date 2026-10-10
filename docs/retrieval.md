@@ -1,4 +1,6 @@
-# 检索链路（Baseline V2）
+# 检索链路
+
+v1.0.1 沿用 Baseline V2 的两路召回、深度和 RRF 参数；仅在原词元全部短于 3 字符时，重新识别被未知片段跨过的术语或 ASCII 词起点。例如「怎么用时间序列预测」可保留「时间序列」，恢复 BM25 召回。已有有效词法查询仍使用原分词。
 
 ## 一、为什么是这套
 
@@ -49,3 +51,5 @@ query
 
 原项目用 `verify_baseline_v2.py` 在 50 题上重跑，与已验收结果 **50/50 完全一致** 后才封版。
 本包用 `scripts/eval_gt50.py` 做同样的事，比对对象是随包的 `data/ground_truth/baseline_v2_snapshot.json`。
+
+上述 50/50 是 v1.0.0 移植验收结果。v1.0.1 的 M10 启用了原先为空的词法召回，因此 49/50 排序一致；原始快照保持不变，当前报告单独存于 `manifests/eval_v1_0_1_result.json`。评测细节见 `evaluation.md`。

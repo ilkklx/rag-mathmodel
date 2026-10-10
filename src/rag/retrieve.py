@@ -6,12 +6,19 @@
 """
 import time
 import os
+from numbers import Integral
 
 from . import bm25, config as cfgmod, fusion, guard as guardmod, rewrite as rwmod
 from . import sources as srcmod
 from . import vector_search as vs
 
 _STATE = {}
+
+
+def _validate_top_k(value):
+    if isinstance(value, bool) or not isinstance(value, Integral) or value < 1:
+        raise ValueError("top_k must be a positive integer")
+    return int(value)
 
 
 def _init(config_path=None):
@@ -36,11 +43,15 @@ def _init(config_path=None):
 
 def retrieve(query, top_k=None, config_path=None):
     """检索入口。返回 dict：{query, results[], meta{}}。"""
+    if top_k is not None:
+        top_k = _validate_top_k(top_k)
     t0 = time.time()
     cfg = _init(config_path)
     rc = cfg["retrieval"]
-    topk = int(top_k or rc["topk"])
+    topk = _validate_top_k(rc["topk"] if top_k is None else top_k)
     pool = int(rc["pool"])
+    if topk > pool:
+        raise ValueError("top_k must not exceed retrieval.pool (%d)" % pool)
     depth = pool * int(rc["recall_multiplier"])
 
     def filt(rid):
@@ -82,7 +93,7 @@ def retrieve(query, top_k=None, config_path=None):
         "results": results,
         "meta": {
             "package": cfg["package"],
-            "baseline": "Baseline V2 (Scheme-B + Q-1 + vector/BM25/RRF)",
+            "baseline": "Baseline V2 + empty lexical query rescue (v1.0.1)",
             "rewrite": {"scheme": rc.get("rewrite_scheme", "B"), "lex_query": lex,
                         "emb_query": emb, "terms": rw["terms"], "fallback": rw.get("fallback", False)},
             "pool": pool, "depth_per_route": depth, "rrf_k": rc["rrf_k"], "top_k": topk,

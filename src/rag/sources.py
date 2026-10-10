@@ -33,8 +33,11 @@ def trust_of(path, source_id):
     p = (path or "")
     if any(h in p for h in UNVERIFIED_HINTS):
         return "未验证（低可信度）"
-    if "评阅要点" in p or "format2026" in p or "竞赛" in p:
-        return "较高（官方类材料，需人工确认）"
+    # 文件名只提示资料类别，不能据此认证发布机构或官方身份。
+    if "评阅要点" in p:
+        return "评阅参考（来源需人工核验）"
+    if "format2026" in p.lower():
+        return "规范参考（来源需人工核验）"
     if source_id in ("ROOT1", "ROOT2", "ROOT3", "ROOT6"):
         return "一般（论文库）"
     return "待人工判断"

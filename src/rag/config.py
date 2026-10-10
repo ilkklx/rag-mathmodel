@@ -6,7 +6,7 @@ import os
 ROOT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".."))
 
 DEFAULTS = {
-    "package": {"name": "RAG-MathModel", "version": "1.0.0"},
+    "package": {"name": "RAG-MathModel", "version": "1.0.1"},
     "index": {"db": "data/index/mvp.db", "vectors": "data/index/vectors.npy"},
     "model": {"name": "BAAI/bge-small-zh-v1.5", "cache_dir": "models/fastembed",
               "local_files_only": True},

@@ -1,5 +1,7 @@
 # DELIVERY_REPORT —— RAG-MathModel v1.0.0
 
+> 历史报告：以下为 v1.0.0 的原始交付记录，指标和包体积不代表 v1.0.1。当前补丁及评测见 CHANGELOG.md、docs/evaluation.md 和 manifests/eval_v1_0_1_result.json。
+
 > 给项目负责人看的交付报告。所有数字均为脚本实测，可在 `manifests/` 复算。
 > 构建时间：2026-09-13｜包体积：**167.2 MB / 48 个文件**（`make_manifest.py` 实测）
 

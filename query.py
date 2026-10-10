@@ -21,8 +21,12 @@ def main():
     ap.add_argument("--no-content", action="store_true", help="不输出正文，仅出处")
     ap.add_argument("--config", default=None)
     a = ap.parse_args()
-
-    out = retrieve(a.query, top_k=a.top_k, config_path=a.config)
+    if a.top_k < 1:
+        ap.error("--top-k must be a positive integer")
+    try:
+        out = retrieve(a.query, top_k=a.top_k, config_path=a.config)
+    except ValueError as exc:
+        ap.error(str(exc))
     if a.no_content:
         for r in out["results"]:
             r.pop("content", None)

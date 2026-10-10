@@ -1,10 +1,9 @@
 {
- "生成时间": "2026-09-13 05:33:39",
+ "生成时间": "2026-10-10 23:42:05",
  "version": [
-  "RAG-MathModel-v1.0.0",
-  "Build Date: 2026-09-13",
-  "Retrieval: Baseline V2 (Scheme-B + Q-1 + vector/BM25/RRF)",
-  "Evaluation: GT-50",
-  "Package Root: E:\\数学建模资源库\\rag"
+  "RAG-MathModel-v1.0.1",
+  "Build Date: 2026-10-10",
+  "Retrieval: Baseline V2 + empty lexical query rescue",
+  "Evaluation: GT-50 (original snapshot retained)"
  ]
 }

@@ -43,15 +43,15 @@ def main():
             total += os.path.getsize(p)
     os.makedirs(os.path.join(ROOT, "manifests"), exist_ok=True)
     ts = time.strftime("%Y-%m-%d %H:%M:%S")
-    io.open(os.path.join(ROOT, "manifests", "file_manifest.json"), "w", encoding="utf-8").write(
+    io.open(os.path.join(ROOT, "manifests", "file_manifest.json"), "w", encoding="utf-8", newline="\n").write(
         json.dumps({"生成时间": ts, "文件数": len(files), "总字节": total,
                     "files": files}, ensure_ascii=False, indent=1) + "\n")
-    io.open(os.path.join(ROOT, "manifests", "sha256.json"), "w", encoding="utf-8").write(
+    io.open(os.path.join(ROOT, "manifests", "sha256.json"), "w", encoding="utf-8", newline="\n").write(
         json.dumps({"生成时间": ts, "范围": "本交付包全部文件（不含 manifests/ 自身）",
                     "files": {k: v["sha256"] for k, v in files.items()},
                     "historical_hashes": HISTORICAL}, ensure_ascii=False, indent=1) + "\n")
     ver = open(os.path.join(ROOT, "VERSION"), encoding="utf-8").read().strip().splitlines()
-    io.open(os.path.join(ROOT, "manifests", "version.json"), "w", encoding="utf-8").write(
+    io.open(os.path.join(ROOT, "manifests", "version.json"), "w", encoding="utf-8", newline="\n").write(
         json.dumps({"生成时间": ts, "version": ver}, ensure_ascii=False, indent=1) + "\n")
     print("文件数=%d 总字节=%.1f MB" % (len(files), total / 1048576.0))
     print("已写出 manifests/file_manifest.json、sha256.json、version.json")

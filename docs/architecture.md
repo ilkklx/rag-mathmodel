@@ -28,11 +28,11 @@
 | 模块 | 职责 | 与原始项目的关系 |
 |------|------|------------------|
 | `config.py` | 读 `config/config.yaml`，把相对路径解析到资源包根目录 | 新写的（原来硬编码绝对路径） |
-| `rewrite.py` | Scheme-B：规范化 → 去疑问词 → 术语最长匹配切分 | **原样复制** `14_BaselineV2/p5_rewrite.py` |
+| `rewrite.py` | Scheme-B 分词；原词法为空时补救术语边界 | 基于 `14_BaselineV2/p5_rewrite.py`，v1.0.1 增加受限补救 |
 | `bm25.py` | Q-1 修复的词法构造 + FTS5 查询 | **等价移植** `p52_lexical.py` |
 | `vector_search.py` | fastembed 编码查询 + 与 `vectors.npy` 点积 | **等价移植** `ask_mvp.vec_search` |
 | `fusion.py` | RRF（k=60） | **等价移植** `ask_mvp.rrf` |
-| `sources.py` | 原始路径 → `source_id` + `relative_path`，可选落到本机语料根 | 新写的（解决"换机后引文打不开"） |
+| `sources.py` | 原始路径 → `source_id` + `relative_path`，可选落到本机语料根；来源提示仅作类别参考 | 新写的；v1.0.1 收紧官方身份提示 |
 | `guard.py` | 断言词法表达式为 `"网格无关"`、不含伪词 | **等价移植** `baseline_v2.guard()` |
 | `retrieve.py` | 编排 + 统一返回结构 | **等价移植** `baseline_v2.retrieve()` 并扩展返回字段 |
 

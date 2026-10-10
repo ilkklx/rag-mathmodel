@@ -2,7 +2,7 @@
 # 用法：复制为 config.yaml 后按本机情况修改（不改也能跑，但打不开原文）。
 package:
   name: RAG-MathModel
-  version: 1.0.0
+  version: 1.0.1
 
 index:
   db: data/index/mvp.db          # 相对路径 → 相对资源包根目录

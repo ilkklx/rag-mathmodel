@@ -1,9 +1,11 @@
-# RAG-MathModel v1.0.0
+# RAG-MathModel v1.0.1
 
-**数学建模知识检索底座（可移植版）** —— 把历年国赛真题、获奖论文、评阅要点、算法资料做成一套**能问、能答、带出处**的本地检索系统。
+**数学建模知识检索底座（可移植版）** —— 把历年国赛真题、获奖论文、评阅要点、算法资料做成一套**能检索、带出处**的本地检索系统。
 
 > 本资源包由原项目 `F:\competition\数学建模省赛\资源\11_RAG化改造方案\`（Phase 0–6 + 诊断 + 分层记录）整理封装而来。
-> 检索算法 = **Baseline V2**（Scheme-B 查询改写 + Q-1 修复的词法构造 + 向量/BM25/RRF 融合），与原项目完全同构。
+> 检索采用 **Baseline V2 + 空词法查询补救**。v1.0.1 修复部分口语问法漏掉术语的问题；原始冻结快照和评测记录保留，当前结果见 `docs/evaluation.md`。
+
+v1.0.1 同时校验 `top_k` 参数、收紧来源提示，并固定 Git 检出的换行格式，避免 Windows 换行转换影响模型缓存和文件校验。详细变更见 `CHANGELOG.md`。
 
 ---
 
@@ -38,6 +40,17 @@ python scripts/check.py
 python query.py "遗传算法适合什么类型的数学建模问题" --top-k 10
 python query.py "2018A 高温服装 边界条件" --top-k 5 --json      # Agent 首选：合法 JSON
 ```
+
+`--top-k` 必须为正整数，且不超过配置中的 `retrieval.pool`（默认 50）；Python 接口用 `top_k=None` 采用配置默认值。
+
+补丁回归检查和当前评测：
+
+```bash
+python -B scripts/test_targeted_fixes.py
+python -B scripts/eval_gt50.py --allow-baseline-diff --output manifests/eval_v1_0_1_result.json
+```
+
+第二条命令会重写当前版本评测文件。原始 `eval_gt50_result.json` 是 v1.0.0 历史记录；省略 `--allow-baseline-diff` 时，评测仍要求结果与原始快照逐条一致。
 
 Python 调用：
 
@@ -78,7 +91,7 @@ for r in out["results"]:
 ## 七、已知问题（详见 `docs/known_issues.md`）
 
 - **公式恢复未完成**：论文公式多为图片式排版，检索到的是周边文字，公式本体可能缺失；
-- **Top-10 不保证全部是直接答案**（内容级 DirectHit 见 `manifests/eval_gt50_result.json` 实测值）；
+- **Top-10 不保证全部是直接答案**（当前内容级 DirectHit 见 `manifests/eval_v1_0_1_result.json`，未标注结果需补核）；
 - **低可信度材料存在**：`07_2026赛题参考（低可信度）` 等材料未经验证，不得当权威引用；
 - **原文本包不携带**：本包只含索引；能否打开原文取决于 `library_roots` 是否指向你本机的语料；
 - 部分验收仍待外部复验（见 `DELIVERY_REPORT.md`）。

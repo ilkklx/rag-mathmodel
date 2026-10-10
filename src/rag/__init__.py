@@ -3,5 +3,5 @@
 from .guard import check as guard_check  # noqa: F401
 from .retrieve import retrieve  # noqa: F401
 
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 __all__ = ["retrieve", "guard_check", "__version__"]

@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 """GT-50 验收：在本资源包里重跑 50 题，与冻结快照逐条比对，并复算内容级/legacy 指标。"""
 import hashlib
+import argparse
 import io
 import json
 import os
@@ -35,6 +36,11 @@ def legacy_relevant(item, r):
 
 
 def main():
+    parser = argparse.ArgumentParser(description="GT-50 evaluation against the original snapshot")
+    parser.add_argument("--output", default=OUTP, help="Output JSON path; keep historical reports separate")
+    parser.add_argument("--allow-baseline-diff", action="store_true",
+                        help="Report intentional ranking changes without requiring exact snapshot equality")
+    args = parser.parse_args()
     items = json.load(io.open(GT, encoding="utf-8"))["items"]
     snap = json.load(io.open(SNAP, encoding="utf-8"))["snapshot"]
     labels = {}
@@ -91,16 +97,18 @@ def main():
         "legacyHit@5_重算": round(lh5 / float(n), 4),
         "legacyHit@10_重算": round(lh10 / float(n), 4),
         "内容标签覆盖率": "%d/%d" % (cov_hit, cov_all),
+        "未标注结果数": cov_all - cov_hit,
+        "指标说明": "未标注结果按非 DIRECT 处理；排序变化后需补标，不能据此宣称完整质量提升。",
         "耗时_s": {"总": round(time.time() - t_all, 2),
                    "平均每问": round(sum(lat) / len(lat), 4), "最大": round(max(lat), 4)},
         "不一致明细": diff,
         "逐题": perq,
     }
-    io.open(OUTP, "w", encoding="utf-8").write(json.dumps(res, ensure_ascii=False, indent=1) + "\n")
+    io.open(args.output, "w", encoding="utf-8", newline="\n").write(json.dumps(res, ensure_ascii=False, indent=1) + "\n")
     brief = {k: v for k, v in res.items() if k != "逐题"}
     print(json.dumps(brief, ensure_ascii=False, indent=1))
-    print("\n结果已写入 %s" % OUTP)
-    return 0 if same == n else 1
+    print("\n结果已写入 %s" % args.output)
+    return 0 if same == n or args.allow_baseline_diff else 1
 
 
 if __name__ == "__main__":

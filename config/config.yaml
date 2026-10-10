@@ -2,7 +2,7 @@
 # 相对路径一律相对「资源包根目录」解析（即本文件的上上级目录）。
 package:
   name: RAG-MathModel
-  version: 1.0.0
+  version: 1.0.1
 
 index:
   db: data/index/mvp.db

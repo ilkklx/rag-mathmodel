@@ -88,8 +88,8 @@ def strip_question_words(s):
     return re.sub(r"\s+", " ", s).strip()
 
 
-def segment(s):
-    """最长匹配切分；连续 ASCII 字母数字整体保留；未命中部分按 2 字窗口切。"""
+def segment(s, preserve_starts=False):
+    """默认沿用 V2 分词；补救模式不跨过术语或 ASCII 词的起点。"""
     lex = sorted(LEXICON, key=len, reverse=True)
     toks, i = [], 0
     while i < len(s):
@@ -114,13 +114,17 @@ def segment(s):
             toks.append(s[i:j])
             i = j
             continue
-        # 未命中：尝试 2 字窗口，否则单字
-        if i + 2 <= len(s) and s[i + 1] != " ":
-            toks.append(s[i:i + 2])
-            i += 2
-        else:
-            toks.append(ch)
-            i += 1
+        # 保留两字窗口，但不吞掉下一位置开始的术语（如「用时间序列」）。
+        if i + 1 < len(s) and s[i + 1] != " ":
+            nxt = s[i + 1]
+            starts_term = preserve_starts and any(s.startswith(term, i + 1) for term in lex)
+            starts_ascii = preserve_starts and nxt.isascii() and nxt.isalnum()
+            if not starts_term and not starts_ascii:
+                toks.append(s[i:i + 2])
+                i += 2
+                continue
+        toks.append(ch)
+        i += 1
     return [t for t in toks if t.strip()]
 
 
@@ -150,6 +154,11 @@ def rewrite(query, scheme="A"):
     if not toks:
         return {"normalized": norm, "terms": [], "bm25_query": query,
                 "emb_query": query, "rules": ["切分失败"], "fallback": True}
+    # 仅在所有词元都短于 trigram 下限时补救，保留已有有效词法查询的排序。
+    if not any(len(t) >= 3 for t in toks):
+        rescued = segment(core, preserve_starts=True)
+        if any(len(t) >= 3 for t in rescued):
+            toks = rescued
     ext, rules = ([], [])
     if scheme == "A":
         ext, rules = expand(norm, toks)
