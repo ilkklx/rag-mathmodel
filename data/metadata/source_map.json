@@ -1,0 +1,37 @@
+{
+ "生成时间": "2026-09-13 05:28:28",
+ "说明": "把索引中的原始绝对路径映射为「source_id + relative_path」；新机器只需在 config.yaml 的 library_roots 里把 source_id 指到本地语料根即可定位原文。",
+ "rules": [
+  {
+   "source_id": "ROOT1",
+   "original_prefix": "E:\\数学建模资源库\\02_按模型分类论文库",
+   "files_in_index": 4743
+  },
+  {
+   "source_id": "ROOT2",
+   "original_prefix": "E:\\数学建模资源库\\01_综合资料库",
+   "files_in_index": 2506
+  },
+  {
+   "source_id": "ROOT3",
+   "original_prefix": "E:\\数学建模资源库\\04_往年国赛题解与源码",
+   "files_in_index": 1084
+  },
+  {
+   "source_id": "ROOT4",
+   "original_prefix": "F:\\competition\\数学建模省赛",
+   "files_in_index": 317
+  },
+  {
+   "source_id": "ROOT5",
+   "original_prefix": "E:\\数学建模资源库\\07_2026赛题参考（低可信度）",
+   "files_in_index": 186
+  },
+  {
+   "source_id": "ROOT6",
+   "original_prefix": "E:\\数学建模资源库\\10_作者心得与经验分享",
+   "files_in_index": 115
+  }
+ ],
+ "note": "本资源包不携带原始 PDF；未配置 library_roots 时 resolved_path 为 null、exists=false（这是如实状态，不是缺失）。"
+}

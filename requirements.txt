@@ -1,0 +1,6 @@
+# RAG-MathModel 运行依赖（2026-09-13 实测版本）
+numpy>=2.0
+fastembed>=0.8.0
+onnxruntime>=1.20
+PyYAML>=6.0
+pillow>=10.0

@@ -1,0 +1,1465 @@
+{
+  "meta": {
+    "name": "数学建模 RAG 评测集 v2（Ground Truth 已逐题核对）",
+    "created": "2026-09-11",
+    "count": 50,
+    "rule": "relevant = 路径命中 primary/secondary 或 文本命中>=min_hits 个 relevant_knowledge"
+  },
+  "items": [
+    {
+      "id": "M01",
+      "category": "建模方法",
+      "question": "高温作业专用服装的传热问题用什么模型建模？",
+      "primary_sources": [
+        "2018A高温服装"
+      ],
+      "secondary_sources": [
+        "评阅要点",
+        "药材",
+        "微网"
+      ],
+      "relevant_knowledge": [
+        "热传导",
+        "偏微分方程",
+        "定解条件",
+        "第三类边界",
+        "对流换热"
+      ],
+      "min_hits": 2,
+      "old_gt": {
+        "paths": [
+          "2018A高温服装"
+        ],
+        "kws": [
+          "热传导",
+          "偏微分方程"
+        ]
+      },
+      "gt_changed": true,
+      "note": "原 GT 只写 2018A高温服装，漏标官方评阅要点（Top1 即该文件），属于标注漏项"
+    },
+    {
+      "id": "M02",
+      "category": "建模方法",
+      "question": "回焊炉炉温曲线怎么建立一维热传递模型？",
+      "primary_sources": [
+        "2020A炉温曲线"
+      ],
+      "secondary_sources": [
+        "评阅要点"
+      ],
+      "relevant_knowledge": [
+        "一维热传递",
+        "有限差分",
+        "热传导",
+        "温区",
+        "炉温"
+      ],
+      "min_hits": 2,
+      "old_gt": {
+        "paths": [
+          "2020A炉温曲线"
+        ],
+        "kws": [
+          "一维热传递",
+          "有限差分"
+        ]
+      },
+      "gt_changed": true,
+      "note": "保留严格 GT；Top10 未召回 2020A，为真实失败"
+    },
+    {
+      "id": "M03",
+      "category": "建模方法",
+      "question": "定日镜场的光学效率怎么分解计算？",
+      "primary_sources": [
+        "2023A"
+      ],
+      "secondary_sources": [
+        "定日镜"
+      ],
+      "relevant_knowledge": [
+        "余弦效率",
+        "阴影遮挡",
+        "截断效率",
+        "大气透射",
+        "光学效率"
+      ],
+      "min_hits": 2,
+      "old_gt": {
+        "paths": [
+          "2023A"
+        ],
+        "kws": [
+          "余弦效率",
+          "阴影遮挡",
+          "截断效率"
+        ]
+      },
+      "gt_changed": true,
+      "note": "原 GT 正确，命中良好"
+    },
+    {
+      "id": "M04",
+      "category": "建模方法",
+      "question": "太阳影子定位问题怎么用几何关系建立影长模型？",
+      "primary_sources": [
+        "2015A",
+        "A095"
+      ],
+      "secondary_sources": [
+        "太阳影子",
+        "影子定位"
+      ],
+      "relevant_knowledge": [
+        "太阳高度角",
+        "影长",
+        "赤纬",
+        "时角",
+        "方位角"
+      ],
+      "min_hits": 2,
+      "old_gt": {
+        "paths": [
+          "2015A"
+        ],
+        "kws": [
+          "太阳高度角",
+          "影长"
+        ]
+      },
+      "gt_changed": true,
+      "note": "原 GT 只写 2015A；实际 2015 年论文文件名多为 A0xx.pdf，漏标多为必然"
+    },
+    {
+      "id": "M05",
+      "category": "建模方法",
+      "question": "系泊系统受力分析怎么建模？",
+      "primary_sources": [
+        "2016A"
+      ],
+      "secondary_sources": [
+        "系泊",
+        "锚链"
+      ],
+      "relevant_knowledge": [
+        "系泊",
+        "锚链",
+        "受力",
+        "浮标",
+        "重物"
+      ],
+      "min_hits": 2,
+      "old_gt": {
+        "paths": [
+          "2016A"
+        ],
+        "kws": [
+          "受力",
+          "锚链"
+        ]
+      },
+      "gt_changed": true,
+      "note": "待复核"
+    },
+    {
+      "id": "M06",
+      "category": "建模方法",
+      "question": "微网储能怎么建模充放电与储电量？",
+      "primary_sources": [
+        "微网",
+        "C题"
+      ],
+      "secondary_sources": [
+        "储能"
+      ],
+      "relevant_knowledge": [
+        "储能",
+        "充放电",
+        "储电量",
+        "光伏",
+        "电价"
+      ],
+      "min_hits": 2,
+      "old_gt": {
+        "paths": [
+          "微网",
+          "C题"
+        ],
+        "kws": [
+          "储能",
+          "充放电",
+          "储电量"
+        ]
+      },
+      "gt_changed": true,
+      "note": "2026 C 题参考"
+    },
+    {
+      "id": "M07",
+      "category": "建模方法",
+      "question": "车道被占用对道路通行能力影响怎么建模？",
+      "primary_sources": [
+        "2013A"
+      ],
+      "secondary_sources": [
+        "车道",
+        "通行能力"
+      ],
+      "relevant_knowledge": [
+        "通行能力",
+        "排队",
+        "车道",
+        "车流量"
+      ],
+      "min_hits": 2,
+      "old_gt": {
+        "paths": [
+          "2013A"
+        ],
+        "kws": [
+          "通行能力",
+          "排队"
+        ]
+      },
+      "gt_changed": true,
+      "note": "待复核"
+    },
+    {
+      "id": "M08",
+      "category": "建模方法",
+      "question": "多波束测线问题怎么建模优化？",
+      "primary_sources": [
+        "2023B"
+      ],
+      "secondary_sources": [
+        "多波束",
+        "测线"
+      ],
+      "relevant_knowledge": [
+        "多波束",
+        "测线",
+        "覆盖宽度",
+        "重叠率"
+      ],
+      "min_hits": 2,
+      "old_gt": {
+        "paths": [
+          "2023B"
+        ],
+        "kws": [
+          "测线",
+          "覆盖"
+        ]
+      },
+      "gt_changed": true,
+      "note": "Top3 全部无关，判定为真实失败；疑为知识缺口"
+    },
+    {
+      "id": "M09",
+      "category": "建模方法",
+      "question": "板凳龙运动学问题怎么建立螺线方程？",
+      "primary_sources": [
+        "2024A",
+        "OurPaper"
+      ],
+      "secondary_sources": [
+        "板凳龙",
+        "螺线"
+      ],
+      "relevant_knowledge": [
+        "螺线",
+        "龙头",
+        "调头",
+        "板凳"
+      ],
+      "min_hits": 2,
+      "old_gt": {
+        "paths": [
+          "2024A"
+        ],
+        "kws": [
+          "螺线",
+          "运动"
+        ]
+      },
+      "gt_changed": true,
+      "note": "命中良好"
+    },
+    {
+      "id": "M10",
+      "category": "建模方法",
+      "question": "板材切割下料怎么用整数规划建模？",
+      "primary_sources": [],
+      "secondary_sources": [
+        "切割",
+        "下料"
+      ],
+      "relevant_knowledge": [
+        "下料",
+        "切割",
+        "整数规划",
+        "板材",
+        "排版"
+      ],
+      "min_hits": 3,
+      "old_gt": {
+        "paths": [
+          "下料",
+          "切割"
+        ],
+        "kws": [
+          "整数规划",
+          "切割"
+        ]
+      },
+      "gt_changed": true,
+      "note": "库里无典型板材下料整数规划资料，判定为知识缺口（Note: 原 GT 过窄）"
+    },
+    {
+      "id": "A01",
+      "category": "算法",
+      "question": "什么情况下适合使用动态规划？",
+      "primary_sources": [
+        "2020B"
+      ],
+      "secondary_sources": [
+        "动态规划"
+      ],
+      "relevant_knowledge": [
+        "动态规划",
+        "多阶段",
+        "状态转移",
+        "最优策略"
+      ],
+      "min_hits": 2,
+      "old_gt": {
+        "paths": [
+          "2020B"
+        ],
+        "kws": [
+          "动态规划",
+          "多阶段"
+        ]
+      },
+      "gt_changed": true,
+      "note": "命中良好"
+    },
+    {
+      "id": "A02",
+      "category": "算法",
+      "question": "遗传算法怎么用于优化问题的求解？",
+      "primary_sources": [],
+      "secondary_sources": [
+        "遗传算法"
+      ],
+      "relevant_knowledge": [
+        "遗传算法",
+        "交叉",
+        "变异",
+        "适应度",
+        "种群"
+      ],
+      "min_hits": 3,
+      "old_gt": {
+        "paths": [],
+        "kws": [
+          "遗传算法",
+          "交叉",
+          "变异"
+        ]
+      },
+      "gt_changed": true,
+      "note": "命中良好"
+    },
+    {
+      "id": "A03",
+      "category": "算法",
+      "question": "粒子群算法怎么调参并用在炉温优化上？",
+      "primary_sources": [
+        "2020A"
+      ],
+      "secondary_sources": [
+        "OurPaper",
+        "2025国赛",
+        "粒子群"
+      ],
+      "relevant_knowledge": [
+        "粒子群",
+        "PSO",
+        "惯性权重",
+        "种群",
+        "适应度"
+      ],
+      "min_hits": 2,
+      "old_gt": {
+        "paths": [
+          "2020A"
+        ],
+        "kws": [
+          "粒子群",
+          "PSO"
+        ]
+      },
+      "gt_changed": true,
+      "note": "原 GT 仅 2020A；Top1/Top2 均为真实相关的 PSO 内容，属漏标"
+    },
+    {
+      "id": "A04",
+      "category": "算法",
+      "question": "层次分析法怎么做一致性检验？",
+      "primary_sources": [],
+      "secondary_sources": [
+        "层次分析"
+      ],
+      "relevant_knowledge": [
+        "层次分析",
+        "一致性",
+        "判断矩阵",
+        "CR",
+        "权重"
+      ],
+      "min_hits": 3,
+      "old_gt": {
+        "paths": [],
+        "kws": [
+          "层次分析",
+          "一致性",
+          "判断矩阵"
+        ]
+      },
+      "gt_changed": true,
+      "note": "Top1 确含一致性检验与 CR，原判定阈值过严"
+    },
+    {
+      "id": "A05",
+      "category": "算法",
+      "question": "熵权法怎么确定指标权重？",
+      "primary_sources": [],
+      "secondary_sources": [
+        "熵权",
+        "熵值"
+      ],
+      "relevant_knowledge": [
+        "熵权",
+        "熵值",
+        "权重",
+        "归一化"
+      ],
+      "min_hits": 2,
+      "old_gt": {
+        "paths": [],
+        "kws": [
+          "熵权",
+          "熵值"
+        ]
+      },
+      "gt_changed": true,
+      "note": "Top1 含熵值取权法，命中"
+    },
+    {
+      "id": "A06",
+      "category": "算法",
+      "question": "模拟退火算法怎么设置初始温度和降温？",
+      "primary_sources": [],
+      "secondary_sources": [
+        "模拟退火"
+      ],
+      "relevant_knowledge": [
+        "模拟退火",
+        "温度",
+        "Metropolis",
+        "降温",
+        "退火"
+      ],
+      "min_hits": 2,
+      "old_gt": {
+        "paths": [],
+        "kws": [
+          "模拟退火",
+          "温度"
+        ]
+      },
+      "gt_changed": true,
+      "note": "命中良好"
+    },
+    {
+      "id": "A07",
+      "category": "算法",
+      "question": "元胞自动机怎么模拟交通流？",
+      "primary_sources": [
+        "2013A"
+      ],
+      "secondary_sources": [
+        "元胞自动机"
+      ],
+      "relevant_knowledge": [
+        "元胞自动机",
+        "交通流",
+        "演化规则",
+        "网格"
+      ],
+      "min_hits": 2,
+      "old_gt": {
+        "paths": [
+          "2013A"
+        ],
+        "kws": [
+          "元胞自动机"
+        ]
+      },
+      "gt_changed": true,
+      "note": "Top3 全部无关，真实失败；疑为知识缺口"
+    },
+    {
+      "id": "A08",
+      "category": "算法",
+      "question": "BP神经网络怎么用于数据预测？",
+      "primary_sources": [],
+      "secondary_sources": [
+        "神经网络"
+      ],
+      "relevant_knowledge": [
+        "神经网络",
+        "BP",
+        "训练",
+        "隐含层",
+        "误差"
+      ],
+      "min_hits": 2,
+      "old_gt": {
+        "paths": [],
+        "kws": [
+          "神经网络",
+          "BP"
+        ]
+      },
+      "gt_changed": true,
+      "note": "命中良好"
+    },
+    {
+      "id": "A09",
+      "category": "算法",
+      "question": "TOPSIS优劣解距离法怎么综合评价？",
+      "primary_sources": [],
+      "secondary_sources": [
+        "TOPSIS",
+        "优劣解"
+      ],
+      "relevant_knowledge": [
+        "TOPSIS",
+        "优劣解",
+        "正理想解",
+        "贴近度",
+        "综合评价"
+      ],
+      "min_hits": 2,
+      "old_gt": {
+        "paths": [],
+        "kws": [
+          "TOPSIS",
+          "优劣解"
+        ]
+      },
+      "gt_changed": true,
+      "note": "Top3 全部无关，真实失败；典型短查询+可能知识缺口"
+    },
+    {
+      "id": "A10",
+      "category": "算法",
+      "question": "Floyd算法怎么求最短路径？",
+      "primary_sources": [],
+      "secondary_sources": [
+        "Floyd",
+        "最短路"
+      ],
+      "relevant_knowledge": [
+        "Floyd",
+        "最短路径",
+        "Dijkstra",
+        "图论",
+        "算法"
+      ],
+      "min_hits": 3,
+      "old_gt": {
+        "paths": [],
+        "kws": [
+          "Floyd",
+          "最短路径"
+        ]
+      },
+      "gt_changed": true,
+      "note": "Top1 讲 DFS/最短路对比属部分相关，但未直接讲 Floyd"
+    },
+    {
+      "id": "F01",
+      "category": "公式与数学关系",
+      "question": "圆柱坐标系下的热传导方程怎么写？",
+      "primary_sources": [
+        "2018A"
+      ],
+      "secondary_sources": [
+        "2020A",
+        "热传导"
+      ],
+      "relevant_knowledge": [
+        "热传导",
+        "偏微分方程",
+        "圆柱",
+        "径向",
+        "导热"
+      ],
+      "min_hits": 2,
+      "old_gt": {
+        "paths": [
+          "2018A"
+        ],
+        "kws": [
+          "热传导",
+          "偏微分"
+        ]
+      },
+      "gt_changed": true,
+      "note": "待复核"
+    },
+    {
+      "id": "F02",
+      "category": "公式与数学关系",
+      "question": "第三类边界条件（Robin条件）怎么表达？",
+      "primary_sources": [
+        "2018A"
+      ],
+      "secondary_sources": [
+        "评阅要点"
+      ],
+      "relevant_knowledge": [
+        "第三类",
+        "边界条件",
+        "对流",
+        "换热系数"
+      ],
+      "min_hits": 2,
+      "old_gt": {
+        "paths": [
+          "2018A"
+        ],
+        "kws": [
+          "边界条件",
+          "对流"
+        ]
+      },
+      "gt_changed": true,
+      "note": "Top1 为官方评阅要点，含第三类边界条件原文，属漏标"
+    },
+    {
+      "id": "F03",
+      "category": "公式与数学关系",
+      "question": "牛顿冷却定律在传热问题里怎么用？",
+      "primary_sources": [],
+      "secondary_sources": [
+        "传热",
+        "冷却"
+      ],
+      "relevant_knowledge": [
+        "牛顿冷却",
+        "对流",
+        "换热",
+        "温度"
+      ],
+      "min_hits": 2,
+      "old_gt": {
+        "paths": [],
+        "kws": [
+          "牛顿冷却",
+          "对流"
+        ]
+      },
+      "gt_changed": true,
+      "note": "待复核"
+    },
+    {
+      "id": "F04",
+      "category": "公式与数学关系",
+      "question": "Fick扩散第二定律的形式是什么？",
+      "primary_sources": [],
+      "secondary_sources": [
+        "扩散",
+        "传质"
+      ],
+      "relevant_knowledge": [
+        "Fick",
+        "扩散",
+        "浓度梯度",
+        "传质"
+      ],
+      "min_hits": 2,
+      "old_gt": {
+        "paths": [],
+        "kws": [
+          "扩散",
+          "Fick"
+        ]
+      },
+      "gt_changed": true,
+      "note": "待复核"
+    },
+    {
+      "id": "F05",
+      "category": "公式与数学关系",
+      "question": "拟合优度R平方怎么计算和解释？",
+      "primary_sources": [
+        "2018A"
+      ],
+      "secondary_sources": [
+        "拟合"
+      ],
+      "relevant_knowledge": [
+        "拟合优度",
+        "残差",
+        "最小二乘",
+        "误差",
+        "R2"
+      ],
+      "min_hits": 2,
+      "old_gt": {
+        "paths": [
+          "2018A"
+        ],
+        "kws": [
+          "拟合优度",
+          "误差"
+        ]
+      },
+      "gt_changed": true,
+      "note": "待复核"
+    },
+    {
+      "id": "F06",
+      "category": "公式与数学关系",
+      "question": "太阳高度角和方位角的计算公式是什么？",
+      "primary_sources": [
+        "2015A",
+        "A095"
+      ],
+      "secondary_sources": [
+        "太阳"
+      ],
+      "relevant_knowledge": [
+        "太阳高度角",
+        "方位角",
+        "赤纬",
+        "时角"
+      ],
+      "min_hits": 2,
+      "old_gt": {
+        "paths": [
+          "2015A"
+        ],
+        "kws": [
+          "太阳高度角",
+          "方位角"
+        ]
+      },
+      "gt_changed": true,
+      "note": "待复核"
+    },
+    {
+      "id": "F07",
+      "category": "公式与数学关系",
+      "question": "储能设备的荷电状态SOC递推关系怎么写？",
+      "primary_sources": [
+        "微网",
+        "C题"
+      ],
+      "secondary_sources": [
+        "储能"
+      ],
+      "relevant_knowledge": [
+        "储能",
+        "充放电",
+        "储电量",
+        "效率",
+        "约束"
+      ],
+      "min_hits": 2,
+      "old_gt": {
+        "paths": [
+          "微网",
+          "C题"
+        ],
+        "kws": [
+          "储能",
+          "效率"
+        ]
+      },
+      "gt_changed": true,
+      "note": "2026 C 题"
+    },
+    {
+      "id": "F08",
+      "category": "公式与数学关系",
+      "question": "多目标优化问题怎么转化成单目标？",
+      "primary_sources": [
+        "2020A"
+      ],
+      "secondary_sources": [
+        "多目标"
+      ],
+      "relevant_knowledge": [
+        "多目标",
+        "加权",
+        "目标函数",
+        " Pareto",
+        "单目标"
+      ],
+      "min_hits": 2,
+      "old_gt": {
+        "paths": [
+          "2020A"
+        ],
+        "kws": [
+          "多目标",
+          "加权"
+        ]
+      },
+      "gt_changed": true,
+      "note": "待复核"
+    },
+    {
+      "id": "F09",
+      "category": "公式与数学关系",
+      "question": "排队论里的排队长度怎么算？",
+      "primary_sources": [
+        "2013A"
+      ],
+      "secondary_sources": [
+        "排队"
+      ],
+      "relevant_knowledge": [
+        "排队",
+        "队长",
+        "到达率",
+        "服务率",
+        "M/M"
+      ],
+      "min_hits": 2,
+      "old_gt": {
+        "paths": [
+          "2013A"
+        ],
+        "kws": [
+          "排队"
+        ]
+      },
+      "gt_changed": true,
+      "note": "待复核"
+    },
+    {
+      "id": "F10",
+      "category": "公式与数学关系",
+      "question": "主成分分析里方差贡献率是什么意思？",
+      "primary_sources": [],
+      "secondary_sources": [
+        "主成分"
+      ],
+      "relevant_knowledge": [
+        "主成分",
+        "贡献率",
+        "方差",
+        "降维"
+      ],
+      "min_hits": 2,
+      "old_gt": {
+        "paths": [],
+        "kws": [
+          "主成分",
+          "贡献率"
+        ]
+      },
+      "gt_changed": true,
+      "note": "待复核"
+    },
+    {
+      "id": "S01",
+      "category": "相似赛题",
+      "question": "哪些赛题涉及一维热传导方程数值求解？",
+      "primary_sources": [
+        "2018A",
+        "2020A"
+      ],
+      "secondary_sources": [
+        "热传导",
+        "差分"
+      ],
+      "relevant_knowledge": [
+        "热传导",
+        "有限差分",
+        "温度场",
+        "扩散"
+      ],
+      "min_hits": 2,
+      "old_gt": {
+        "paths": [
+          "2018A",
+          "2020A"
+        ],
+        "kws": [
+          "热传导",
+          "差分"
+        ]
+      },
+      "gt_changed": true,
+      "note": "聚合类问题"
+    },
+    {
+      "id": "S02",
+      "category": "相似赛题",
+      "question": "哪些赛题用到了光学效率或光路几何分析？",
+      "primary_sources": [
+        "2023A",
+        "2017A"
+      ],
+      "secondary_sources": [
+        "定日镜",
+        "CT"
+      ],
+      "relevant_knowledge": [
+        "光学效率",
+        "光线",
+        "反射",
+        "投影"
+      ],
+      "min_hits": 2,
+      "old_gt": {
+        "paths": [
+          "2023A",
+          "2017A"
+        ],
+        "kws": [
+          "效率",
+          "光线"
+        ]
+      },
+      "gt_changed": true,
+      "note": "聚合类问题"
+    },
+    {
+      "id": "S03",
+      "category": "相似赛题",
+      "question": "哪些赛题是路径规划或最短路问题？",
+      "primary_sources": [],
+      "secondary_sources": [
+        "路径",
+        "最短路"
+      ],
+      "relevant_knowledge": [
+        "最短路径",
+        "路径规划",
+        "Dijkstra",
+        "Floyd",
+        "图"
+      ],
+      "min_hits": 3,
+      "old_gt": {
+        "paths": [],
+        "kws": [
+          "路径",
+          "最短"
+        ]
+      },
+      "gt_changed": true,
+      "note": "聚合类问题"
+    },
+    {
+      "id": "S04",
+      "category": "相似赛题",
+      "question": "哪些赛题属于评价类模型？",
+      "primary_sources": [],
+      "secondary_sources": [
+        "评价"
+      ],
+      "relevant_knowledge": [
+        "评价",
+        "指标",
+        "权重",
+        "综合"
+      ],
+      "min_hits": 2,
+      "old_gt": {
+        "paths": [],
+        "kws": [
+          "评价",
+          "指标"
+        ]
+      },
+      "gt_changed": true,
+      "note": "聚合类问题"
+    },
+    {
+      "id": "S05",
+      "category": "相似赛题",
+      "question": "哪些赛题需要做参数辨识或反演？",
+      "primary_sources": [
+        "2018A",
+        "2017A"
+      ],
+      "secondary_sources": [
+        "标定",
+        "反演"
+      ],
+      "relevant_knowledge": [
+        "反演",
+        "标定",
+        "参数估计",
+        "拟合"
+      ],
+      "min_hits": 2,
+      "old_gt": {
+        "paths": [
+          "2018A",
+          "2017A"
+        ],
+        "kws": [
+          "反演",
+          "标定",
+          "参数"
+        ]
+      },
+      "gt_changed": true,
+      "note": "聚合类问题"
+    },
+    {
+      "id": "S06",
+      "category": "相似赛题",
+      "question": "哪些赛题涉及生产调度优化？",
+      "primary_sources": [
+        "2018B"
+      ],
+      "secondary_sources": [
+        "调度"
+      ],
+      "relevant_knowledge": [
+        "调度",
+        "生产",
+        "优化",
+        "排程"
+      ],
+      "min_hits": 2,
+      "old_gt": {
+        "paths": [
+          "2018B"
+        ],
+        "kws": [
+          "调度",
+          "优化"
+        ]
+      },
+      "gt_changed": true,
+      "note": "聚合类问题"
+    },
+    {
+      "id": "S07",
+      "category": "相似赛题",
+      "question": "哪些赛题用了时间序列预测？",
+      "primary_sources": [],
+      "secondary_sources": [
+        "时间序列",
+        "预测"
+      ],
+      "relevant_knowledge": [
+        "时间序列",
+        "预测",
+        "ARIMA",
+        "灰色"
+      ],
+      "min_hits": 2,
+      "old_gt": {
+        "paths": [],
+        "kws": [
+          "时间序列",
+          "预测"
+        ]
+      },
+      "gt_changed": true,
+      "note": "聚合类问题"
+    },
+    {
+      "id": "S08",
+      "category": "相似赛题",
+      "question": "哪些赛题需要处理图像或视频数据？",
+      "primary_sources": [
+        "2013A",
+        "2017A"
+      ],
+      "secondary_sources": [
+        "图像",
+        "视频"
+      ],
+      "relevant_knowledge": [
+        "图像",
+        "视频",
+        "像素",
+        "处理"
+      ],
+      "min_hits": 2,
+      "old_gt": {
+        "paths": [
+          "2013A",
+          "2017A"
+        ],
+        "kws": [
+          "图像",
+          "视频"
+        ]
+      },
+      "gt_changed": true,
+      "note": "聚合类问题"
+    },
+    {
+      "id": "S09",
+      "category": "相似赛题",
+      "question": "哪些赛题涉及能源与电力系统优化？",
+      "primary_sources": [
+        "微网",
+        "C题"
+      ],
+      "secondary_sources": [
+        "能源",
+        "电力"
+      ],
+      "relevant_knowledge": [
+        "电力",
+        "能源",
+        "储能",
+        "负荷"
+      ],
+      "min_hits": 2,
+      "old_gt": {
+        "paths": [
+          "微网",
+          "C题"
+        ],
+        "kws": [
+          "电力",
+          "储能"
+        ]
+      },
+      "gt_changed": true,
+      "note": "聚合类问题"
+    },
+    {
+      "id": "S10",
+      "category": "相似赛题",
+      "question": "哪些赛题属于几何建模类问题？",
+      "primary_sources": [
+        "2015A",
+        "2023A"
+      ],
+      "secondary_sources": [
+        "几何",
+        "坐标"
+      ],
+      "relevant_knowledge": [
+        "几何",
+        "坐标",
+        "向量",
+        "距离"
+      ],
+      "min_hits": 2,
+      "old_gt": {
+        "paths": [
+          "2015A",
+          "2023A"
+        ],
+        "kws": [
+          "几何",
+          "坐标"
+        ]
+      },
+      "gt_changed": true,
+      "note": "聚合类问题"
+    },
+    {
+      "id": "C01",
+      "category": "综合",
+      "question": "隐式差分格式和显式差分格式该怎么选？",
+      "primary_sources": [
+        "2018A"
+      ],
+      "secondary_sources": [
+        "评阅要点",
+        "差分"
+      ],
+      "relevant_knowledge": [
+        "隐式",
+        "显式",
+        "差分",
+        "稳定",
+        "格式"
+      ],
+      "min_hits": 3,
+      "old_gt": {
+        "paths": [
+          "2018A"
+        ],
+        "kws": [
+          "隐式",
+          "差分",
+          "稳定"
+        ]
+      },
+      "gt_changed": true,
+      "note": "Top1 为无关文件；但评阅要点含隐式/显式对比，属漏标"
+    },
+    {
+      "id": "C02",
+      "category": "综合",
+      "question": "模型灵敏度分析一般怎么做，分析哪些参数？",
+      "primary_sources": [],
+      "secondary_sources": [
+        "灵敏度",
+        "敏感性"
+      ],
+      "relevant_knowledge": [
+        "灵敏度",
+        "敏感性",
+        "参数",
+        "扰动"
+      ],
+      "min_hits": 2,
+      "old_gt": {
+        "paths": [],
+        "kws": [
+          "灵敏度",
+          "敏感性"
+        ]
+      },
+      "gt_changed": true,
+      "note": "命中良好"
+    },
+    {
+      "id": "C03",
+      "category": "综合",
+      "question": "建模论文里模型检验章节应该写什么？",
+      "primary_sources": [
+        "评阅要点"
+      ],
+      "secondary_sources": [
+        "格式规范"
+      ],
+      "relevant_knowledge": [
+        "检验",
+        "误差",
+        "稳定性",
+        "灵敏度"
+      ],
+      "min_hits": 2,
+      "old_gt": {
+        "paths": [
+          "评阅要点"
+        ],
+        "kws": [
+          "检验",
+          "误差"
+        ]
+      },
+      "gt_changed": true,
+      "note": "Top1 无关；官方评阅要点明确要求模型检验，属漏标"
+    },
+    {
+      "id": "C04",
+      "category": "综合",
+      "question": "优化模型建模时目标函数和约束条件怎么确定？",
+      "primary_sources": [],
+      "secondary_sources": [
+        "目标函数",
+        "约束"
+      ],
+      "relevant_knowledge": [
+        "目标函数",
+        "约束",
+        "优化",
+        "决策变量"
+      ],
+      "min_hits": 3,
+      "old_gt": {
+        "paths": [],
+        "kws": [
+          "目标函数",
+          "约束"
+        ]
+      },
+      "gt_changed": true,
+      "note": "待复核"
+    },
+    {
+      "id": "C05",
+      "category": "综合",
+      "question": "数据预处理里缺失值和异常值怎么处理？",
+      "primary_sources": [],
+      "secondary_sources": [
+        "预处理",
+        "缺失"
+      ],
+      "relevant_knowledge": [
+        "缺失",
+        "异常",
+        "预处理",
+        "数据清洗"
+      ],
+      "min_hits": 2,
+      "old_gt": {
+        "paths": [],
+        "kws": [
+          "缺失",
+          "异常",
+          "预处理"
+        ]
+      },
+      "gt_changed": true,
+      "note": "命中良好"
+    },
+    {
+      "id": "C06",
+      "category": "综合",
+      "question": "蜂窝状材料或结构的等效参数怎么确定？",
+      "primary_sources": [],
+      "secondary_sources": [
+        "等效",
+        "参数"
+      ],
+      "relevant_knowledge": [
+        "等效",
+        "参数",
+        "材料"
+      ],
+      "min_hits": 2,
+      "old_gt": {
+        "paths": [],
+        "kws": [
+          "等效",
+          "参数"
+        ]
+      },
+      "gt_changed": true,
+      "note": "待复核"
+    },
+    {
+      "id": "C07",
+      "category": "综合",
+      "question": "如何验证一个数值模型的网格无关性？",
+      "primary_sources": [
+        "2018A",
+        "2020A"
+      ],
+      "secondary_sources": [
+        "网格",
+        "收敛"
+      ],
+      "relevant_knowledge": [
+        "网格",
+        "收敛",
+        "误差",
+        "加密"
+      ],
+      "min_hits": 3,
+      "old_gt": {
+        "paths": [
+          "2018A",
+          "2020A"
+        ],
+        "kws": [
+          "网格",
+          "收敛"
+        ]
+      },
+      "gt_changed": true,
+      "note": "Top1 无关，真实失败或漏标"
+    },
+    {
+      "id": "C08",
+      "category": "综合",
+      "question": "多阶段决策问题用什么方法求解？",
+      "primary_sources": [
+        "2020B"
+      ],
+      "secondary_sources": [
+        "动态规划"
+      ],
+      "relevant_knowledge": [
+        "动态规划",
+        "阶段",
+        "状态",
+        "决策"
+      ],
+      "min_hits": 2,
+      "old_gt": {
+        "paths": [
+          "2020B"
+        ],
+        "kws": [
+          "动态规划",
+          "阶段"
+        ]
+      },
+      "gt_changed": true,
+      "note": "命中良好"
+    },
+    {
+      "id": "C09",
+      "category": "综合",
+      "question": "如何评价一个数学模型的优缺点？",
+      "primary_sources": [
+        "评阅要点"
+      ],
+      "secondary_sources": [
+        "模型评价"
+      ],
+      "relevant_knowledge": [
+        "评价",
+        "优点",
+        "缺点",
+        "改进"
+      ],
+      "min_hits": 2,
+      "old_gt": {
+        "paths": [
+          "评阅要点"
+        ],
+        "kws": [
+          "评价",
+          "优点",
+          "缺点"
+        ]
+      },
+      "gt_changed": true,
+      "note": "Top1 无关，可能漏标"
+    },
+    {
+      "id": "C10",
+      "category": "综合",
+      "question": "赛题里给了附件数据，应该怎么设计数据处理流程？",
+      "primary_sources": [],
+      "secondary_sources": [
+        "数据",
+        "处理"
+      ],
+      "relevant_knowledge": [
+        "数据",
+        "处理",
+        "预处理",
+        "附件"
+      ],
+      "min_hits": 2,
+      "old_gt": {
+        "paths": [],
+        "kws": [
+          "数据",
+          "处理"
+        ]
+      },
+      "gt_changed": true,
+      "note": "命中良好"
+    }
+  ]
+}
