@@ -1,4 +1,4 @@
-RAG-MathModel-v1.0.1
+RAG-MathModel-v1.0.2
 Build Date: 2026-10-10
 Retrieval: Baseline V2 + empty lexical query rescue
 Evaluation: GT-50 (original snapshot retained)

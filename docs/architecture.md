@@ -44,8 +44,8 @@
 
 ## 四、可移植性设计
 
-1. **零绝对路径**：代码内不出现 `F:\` / `E:\`，全部经 `config.py` 的 `ROOT` 解析；
-2. **配置外置**：索引位置、模型位置、语料根映射都写在 `config/config.yaml`；
+1. **可移植路径**：默认配置使用相对路径，资料目录由使用者自行填写；
+2. **配置外置**：个人资料目录写在被 Git 忽略的 `config/config.local.yaml`；
 3. **离线模型**：模型随包携带，`model.local_files_only: true`；
 4. **路径映射**：`sources.py` 把索引里的原始路径折算成 `source_id + relative_path`，换机只需改 `library_roots`；
 5. **完整性**：`manifests/sha256.json` 覆盖包内全部文件，`scripts/verify.py` 可校验。

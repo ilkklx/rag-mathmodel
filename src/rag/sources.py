@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-"""路径映射：把索引里的原始绝对路径解析成「source_id + relative_path」，并可落到本地语料根。
+"""路径映射：把索引里的逻辑来源路径解析成「source_id + relative_path」。
 
-设计目的：新机器没有原作者电脑上的 F:/E: 目录，但必须能回答“这条结果出自哪个库、哪篇文件”。
+使用者自行配置资料目录，系统据此定位结果对应的原文。
 未配置 library_roots 时，resolved_path=null、exists=false —— 这是如实状态，不是错误。
 """
 import io
@@ -22,7 +22,7 @@ def load_map(cfg):
 def match_rule(rules, original_path):
     best = None
     for r in rules or []:
-        pre = (r.get("original_prefix") or "").rstrip("\\")
+        pre = (r.get("original_prefix") or "").rstrip("\\/")
         if original_path.lower().startswith(pre.lower()):
             if best is None or len(pre) > len(best.get("original_prefix", "")):
                 best = r
@@ -31,7 +31,7 @@ def match_rule(rules, original_path):
 
 def trust_of(path, source_id):
     p = (path or "")
-    if any(h in p for h in UNVERIFIED_HINTS):
+    if source_id == "ROOT5" or any(h in p for h in UNVERIFIED_HINTS):
         return "未验证（低可信度）"
     # 文件名只提示资料类别，不能据此认证发布机构或官方身份。
     if "评阅要点" in p:
@@ -49,13 +49,13 @@ def resolve(cfg, original_path):
     rule = match_rule(rules, original_path or "")
     sid = rule["source_id"] if rule else None
     prefix = (rule.get("original_prefix") if rule else "") or ""
-    rel = (original_path or "")[len(prefix):].lstrip("\\") if prefix else (original_path or "")
+    rel = (original_path or "")[len(prefix):].lstrip("\\/") if prefix else (original_path or "")
     roots = (cfg.get("paths", {}) or {}).get("library_roots", {}) or {}
     local_root = roots.get(sid) or roots.get("default")
     resolved = None
     exists = False
     if local_root and rel:
-        cand = os.path.join(local_root, rel.replace("/", os.sep))
+        cand = os.path.join(local_root, rel.replace("\\", os.sep).replace("/", os.sep))
         resolved = cand
         exists = os.path.isfile(cand)
     return {"source_id": sid, "relative_path": rel, "original_path": original_path,

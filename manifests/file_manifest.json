@@ -1,7 +1,7 @@
 {
- "生成时间": "2026-10-10 23:42:05",
- "文件数": 53,
- "总字节": 175267217,
+ "生成时间": "2026-10-11 12:42:51",
+ "文件数": 52,
+ "总字节": 174254944,
  "files": {
   ".gitattributes": {
    "sha256": "2a9963ac981198794e3cd495669f20842b245f2d0eec00ce8a82ed2f2e8acbcb",
@@ -9,29 +9,24 @@
    "mtime": "2026-10-10 23:38:24"
   },
   ".gitignore": {
-   "sha256": "d39d777282b0ba7f51bdeb2c642bb723d9f0ccb9b05de3797893d4b738ce25b7",
-   "bytes": 76,
-   "mtime": "2026-10-10 23:30:06"
+   "sha256": "7ec7df96d95b76727d60aed298088321e58eaf29ac5cfc0b8c101ab8800cfea0",
+   "bytes": 157,
+   "mtime": "2026-10-11 12:42:50"
   },
   "AGENT_GUIDE.md": {
-   "sha256": "2ee1c1d392e46ee6821eb08fa0c27abfb31876e2baf419896cd10e454140e84a",
-   "bytes": 8609,
-   "mtime": "2026-10-10 23:40:44"
+   "sha256": "ebe1dc2f57c869b57c8fc775993612e91f4a219fd028ae5e85aba22d0371c403",
+   "bytes": 8578,
+   "mtime": "2026-10-11 12:42:50"
   },
   "CHANGELOG.md": {
-   "sha256": "0ac49fd1fac30e46e326c5f75e78e90919a221a6be97d8813a990d68c2302bfb",
-   "bytes": 2734,
-   "mtime": "2026-10-10 23:41:59"
-  },
-  "DELIVERY_REPORT.md": {
-   "sha256": "b279a81899548959788db91160a2b436f527041f7971700c1185deb241ee8d06",
-   "bytes": 11299,
-   "mtime": "2026-10-10 23:39:09"
+   "sha256": "ff739e59550483c0be5a0a68cb2795ceef70b8a4ec9e911d877175dd00efb0c4",
+   "bytes": 2966,
+   "mtime": "2026-10-11 12:42:50"
   },
   "PROJECT_SUMMARY.md": {
-   "sha256": "eb44a6121bbf75324853ef9af71f9e4959cd7c551db44f93f07446efe32061b3",
-   "bytes": 7391,
-   "mtime": "2026-10-10 23:39:09"
+   "sha256": "8cecc08da7ef78b94fad0f3e45a0ffcab7a17bcc10befda0855531322d989376",
+   "bytes": 7480,
+   "mtime": "2026-10-11 12:42:50"
   },
   "query.py": {
    "sha256": "d040e38db186981104b759527bf3e06539cf9e0837fa92832f04361be070b8a1",
@@ -39,14 +34,14 @@
    "mtime": "2026-10-10 23:39:09"
   },
   "QUICKSTART.md": {
-   "sha256": "d1cec59557505979cad497cb664f6503077055035105359fa90b0a82f03e7f74",
-   "bytes": 2034,
-   "mtime": "2026-10-10 23:39:09"
+   "sha256": "1870b24053cf362d53940b1351aa7d94b0fd6a98b15e8ed2b25d74545586a643",
+   "bytes": 2037,
+   "mtime": "2026-10-11 12:42:50"
   },
   "README.md": {
-   "sha256": "33c014d5baac1e95d0f590592117f81752a769e8646e2dd4a12cdbcbb9561d23",
-   "bytes": 4601,
-   "mtime": "2026-10-10 23:40:44"
+   "sha256": "6ef797db3d66170adaded06e9a258232cc460386ee063e3a34375e4f92f0b5f6",
+   "bytes": 4865,
+   "mtime": "2026-10-11 12:42:50"
   },
   "requirements.txt": {
    "sha256": "5ff453e42e0a4a0dfdb8392b9ca61a7307254f1d155808bbdcf08e10d8d95d8a",
@@ -54,29 +49,29 @@
    "mtime": "2026-10-10 23:39:09"
   },
   "VERSION": {
-   "sha256": "d14bbe03decab9e34f9300df9b06566d622a2e978b63bed031d3baf8968fec8e",
+   "sha256": "4d557a8a3924f3849416efbd28778e35cb1ee4f80478c10fb730d1b31bddf90b",
    "bytes": 143,
-   "mtime": "2026-10-10 23:39:09"
+   "mtime": "2026-10-11 12:42:50"
   },
   "config/config.example.yaml": {
-   "sha256": "a2cc5cd2b4f5a6997f350eb093ee808ddf66222efe24b1ee6cacdf9735367b35",
-   "bytes": 1173,
-   "mtime": "2026-10-10 23:39:09"
+   "sha256": "d7aa98b5653cf135fa137d65a389694abb8a699cae4ef26893d3b88ee283aa12",
+   "bytes": 524,
+   "mtime": "2026-10-11 12:42:50"
   },
   "config/config.yaml": {
-   "sha256": "b733657f511652e02b0b73ced15a43eb66fdf40951af01f19e152169bf23e77e",
-   "bytes": 1254,
-   "mtime": "2026-10-10 23:39:09"
+   "sha256": "d7aa98b5653cf135fa137d65a389694abb8a699cae4ef26893d3b88ee283aa12",
+   "bytes": 524,
+   "mtime": "2026-10-11 12:42:50"
   },
   "data/ground_truth/baseline_v2_snapshot.json": {
-   "sha256": "1356d3811509fb547275ad2d75287a4d3a1af84b089e770f8f3176ccabd8e0ed",
-   "bytes": 167194,
-   "mtime": "2026-10-10 23:39:09"
+   "sha256": "705953b146b4e59bca33ac8015de080986d2a6043d07997785045398816371df",
+   "bytes": 142552,
+   "mtime": "2026-10-11 12:42:50"
   },
   "data/ground_truth/content_labels_v2.jsonl": {
-   "sha256": "edbe67e389ccf54018e299e9893984ad2fc8255d80df3899469d7abaaa45bbc9",
-   "bytes": 514858,
-   "mtime": "2026-10-10 23:30:06"
+   "sha256": "4a03d79541c5e81ee875f9516041ced0be78b851f44902b988dc500f96fc57d6",
+   "bytes": 513645,
+   "mtime": "2026-10-11 12:42:50"
   },
   "data/ground_truth/eval_set_v2.json": {
    "sha256": "4c32fe13570ae454f8745278fce17429fc66cad8352d62134c5a6cef92e6b8f6",
@@ -84,14 +79,14 @@
    "mtime": "2026-10-10 23:39:09"
   },
   "data/index/mvp.db": {
-   "sha256": "cb12ad999b0a6a78e1ae1ef3c54510e183a9d1dfee7ccf4fb2041daa1819725d",
-   "bytes": 60895232,
-   "mtime": "2026-10-10 23:30:06"
+   "sha256": "1b18ebc4afc4de7267c80d812e6d543dc1d1271d14be3abd8e418114bb1e1a43",
+   "bytes": 59920384,
+   "mtime": "2026-10-11 12:32:33"
   },
   "data/index/vectors.npy": {
-   "sha256": "d11d875a2209610f685a1bf44f19b55689aec4df4bf75935ec47b2f1f36d0a1b",
+   "sha256": "57ae9d73c7f5bac6be9d3a0dae1bd234a226c18c3a368f66b1a780b7619f3be3",
    "bytes": 18331776,
-   "mtime": "2026-10-10 23:30:07"
+   "mtime": "2026-10-11 12:33:56"
   },
   "data/metadata/index_meta.json": {
    "sha256": "7cd3de1ff22be56b33da3e8ff632fe0b54573686cb3a423c26d1fe573ab6e5a3",
@@ -99,19 +94,19 @@
    "mtime": "2026-10-10 23:39:09"
   },
   "data/metadata/source_map.json": {
-   "sha256": "feed50e3a98d0d6da9cc1e506867f51874d78c46f42ed7d38721aac1780e3e95",
-   "bytes": 1236,
-   "mtime": "2026-10-10 23:39:09"
+   "sha256": "d2e1145d43c7e8e9f93689d3ac813697f49a7ce2459484d96c6a30e1c211a5a9",
+   "bytes": 878,
+   "mtime": "2026-10-11 12:42:50"
   },
   "docs/architecture.md": {
-   "sha256": "64bf7b2a2b71152f033214bc5384f3540eb473f97140db7d35798ed6b74bf621",
-   "bytes": 3101,
-   "mtime": "2026-10-10 23:39:09"
+   "sha256": "aca744acbe3413b6ebf1b07a587ecc4d5a261638a20d5f3cf6974151fc283a54",
+   "bytes": 3089,
+   "mtime": "2026-10-11 12:42:50"
   },
   "docs/evaluation.md": {
-   "sha256": "57bc77fe02ffbfbc0690cab8a368af5973a5a03af4395d8a0a38c1fefe03cc65",
-   "bytes": 3851,
-   "mtime": "2026-10-10 23:40:44"
+   "sha256": "93d4cbaf2b5f0f346f8197c1cabddfe783e61be7bf3e1adfa8928bb1f3c61ce0",
+   "bytes": 4537,
+   "mtime": "2026-10-11 12:42:50"
   },
   "docs/known_issues.md": {
    "sha256": "2152081e7214584da8ab95135e33e995925712d40ef1d4b8717f8d97a84b2d34",
@@ -194,9 +189,9 @@
    "mtime": "2026-10-10 23:41:59"
   },
   "scripts/make_manifest.py": {
-   "sha256": "c6f378a3f4b46f0cdce517dd80dfe1e6122514b0049d415214035a514691a0d0",
-   "bytes": 2752,
-   "mtime": "2026-10-10 23:41:59"
+   "sha256": "d65b75346808c0f383d30d4c323ef796121d9f258312ed9d9c79c7b9bc2eeb46",
+   "bytes": 2887,
+   "mtime": "2026-10-11 12:42:50"
   },
   "scripts/setup.py": {
    "sha256": "56e85229f1b813f754d04863afa1b1ee97fee33aa46bfba699542005df705241",
@@ -229,9 +224,9 @@
    "mtime": "2026-10-10 23:39:09"
   },
   "src/rag/config.py": {
-   "sha256": "892351257e9af473fd99cc373c69d77b0d90f812fc4cc574642c3803259c403f",
-   "bytes": 1940,
-   "mtime": "2026-10-10 23:39:09"
+   "sha256": "8783c584a96ecdff0771ebb307785bdc2623e43420771068a0c329676e521655",
+   "bytes": 1999,
+   "mtime": "2026-10-11 12:42:50"
   },
   "src/rag/fusion.py": {
    "sha256": "331effbd68be388a1200beea7b0930c7102dc8a40a1f14059a01803ebb9fb25d",
@@ -254,9 +249,9 @@
    "mtime": "2026-10-10 23:39:09"
   },
   "src/rag/sources.py": {
-   "sha256": "7977d9e54e1cd975feea7030f4f1ce0a98a089b9d651988229aac8ae8ca9cc4d",
-   "bytes": 2492,
-   "mtime": "2026-10-10 23:39:09"
+   "sha256": "439495bfe0576b426ad850254b6c757efe6edaefe15d511a02054930f50c3545",
+   "bytes": 2452,
+   "mtime": "2026-10-11 12:42:50"
   },
   "src/rag/vector_search.py": {
    "sha256": "65cbfe2f64cfa719b457ad961f3511c1e83355589d926444b2c6fe84ae4e2bc8",

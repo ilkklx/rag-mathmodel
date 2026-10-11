@@ -1,6 +1,8 @@
+> v1.0.2 已进行路径脱敏；历史评测说明保留，当前验证结果见 docs/evaluation.md。
+
 # 项目总结 · RAG-MathModel 数学建模知识检索底座（rag-mathmodel）
 
-> 维护说明（2026-10-10）：当前版本为 v1.0.1，已修补空词法查询的术语边界、top_k 参数和来源提示。下文 v1.0.0/50/50 等内容保留为历史项目总结；当前变更以 CHANGELOG、docs/evaluation.md 和 manifests/eval_v1_0_1_result.json 为准。
+> 维护说明（2026-10-10）：当前版本为 v1.0.2，已修补空词法查询的术语边界、top_k 参数和来源提示。下文 v1.0.0/50/50 等内容保留为历史项目总结；当前变更以 CHANGELOG、docs/evaluation.md 和 manifests/eval_v1_0_1_result.json 为准。
 
 > 本文档是仓库的**自包含项目说明**：目标让任何读者（或 AI）只读这一篇，就能完整了解这个系统是什么、算法细节、数据规模、怎么跑、有什么坑。关键结论标注来源文件。
 > 撰写时间：2026-10-10。基于对仓库全部文件的通读核对（含 verify.py 实跑复核）。
@@ -66,7 +68,7 @@ python query.py "遗传算法适合什么类型的数学建模问题" --top-k 10
 python query.py "2018A 高温服装 边界条件" --top-k 5 --json    # Agent 首选
 ```
 
-Python API：`from rag import retrieve`。换机只需改 `config/config.yaml` 的 `library_roots`（原文定位用）。本仓库 verify.py 已实跑复核：**49/49 文件哈希一致 PASS**。
+Python API：`from rag import retrieve`。换机只需改 `config/config.local.yaml` 的 `library_roots`（原文定位用）。本仓库 verify.py 已实跑复核：**49/49 文件哈希一致 PASS**。
 
 ## 7. 评测方法与结果（manifests/eval_gt50_result.json）
 
@@ -83,7 +85,7 @@ Python API：`from rag import retrieve`。换机只需改 `config/config.yaml` �
 ## 9. 打包与公开说明
 
 - **无任何密钥**（全量 grep api_key/secret/sk-/token 均为误报）；
-- 配置与快照中保留了打包机器的本地路径（如 `E:\数学建模资源库\...`，见 config/config.yaml、source_map.json、baseline 快照）——仅为离线溯源设计，不含个人信息；
+- 配置与快照中保留了打包机器的本地路径（如 `D:/rag`，见 config/config.yaml、source_map.json、baseline 快照）——仅为离线溯源设计，不含个人信息；
 - 文档与实物小出入：DELIVERY_REPORT 称"48 个文件"（实为 49）、称 check.py"12 项"（实为 13 条检查）；`index_meta.json` 的 `vectors_rows` 为 null（未回填，非损坏）；
 - **本包不含建库/建索引脚本**：可复现"检索"，不可复现"从原始语料建库"（流程仅存于 research_notes.md 文字描述）。
 

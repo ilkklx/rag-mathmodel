@@ -1,0 +1,501 @@
+{
+ "生成时间": "2026-10-11 12:39:56",
+ "题数": 50,
+ "一致率_vs冻结快照": "12/50",
+ "一致率数值": 0.24,
+ "DirectHit@5": 0.34,
+ "DirectHit@10": 0.4,
+ "MRR@10": 0.2504,
+ "legacyHit@5_重算": 0.9,
+ "legacyHit@10_重算": 0.9,
+ "内容标签覆盖率": "476/500",
+ "未标注结果数": 24,
+ "指标说明": "未标注结果按非 DIRECT 处理；排序变化后需补标，不能据此宣称完整质量提升。",
+ "耗时_s": {
+  "总": 2.33,
+  "平均每问": 0.0464,
+  "最大": 1.9647
+ },
+ "不一致明细": [
+  {
+   "id": "M02",
+   "first_diff_rank": 7,
+   "got": "A1053基于改进的神经网络和混沌时间序列预测控制高炉炼铁过程.pdf#9",
+   "exp": "基于改进的神经网络和混沌时间序列预测控制高炉炼铁过程.pdf#9"
+  },
+  {
+   "id": "M03",
+   "first_diff_rank": 3,
+   "got": "2023A论文.pdf#6",
+   "exp": "A题.pdf#1"
+  },
+  {
+   "id": "M05",
+   "first_diff_rank": 4,
+   "got": "[2016年国赛高教杯奖A题]东南大学-系泊系统的设计.pdf#0",
+   "exp": "A433.pdf#0"
+  },
+  {
+   "id": "M06",
+   "first_diff_rank": 6,
+   "got": "C题_微网与外部电网电力调控策略_建模与求解说明文档.pdf#5",
+   "exp": "C题_微网与外部电网电力调控策略_建模与求解说明文档.pdf#5"
+  },
+  {
+   "id": "M08",
+   "first_diff_rank": 8,
+   "got": "A1053基于改进的神经网络和混沌时间序列预测控制高炉炼铁过程.pdf#9",
+   "exp": "基于改进的神经网络和混沌时间序列预测控制高炉炼铁过程.pdf#9"
+  },
+  {
+   "id": "M10",
+   "first_diff_rank": 1,
+   "got": "露天矿生产的车辆安排.pdf#7",
+   "exp": "截断切割优化模型.pdf#4"
+  },
+  {
+   "id": "A02",
+   "first_diff_rank": 1,
+   "got": "1190c手机语音识别技术的设计与实现 .pdf#24",
+   "exp": "手机语音识别技术的设计与实现 .pdf#24"
+  },
+  {
+   "id": "A04",
+   "first_diff_rank": 7,
+   "got": "cumcm0849—关于高等教育学费评价的标准及建议.PDF#13",
+   "exp": "2008一等奖关于高等教育学费标准的评价及建议 .PDF#13"
+  },
+  {
+   "id": "A05",
+   "first_diff_rank": 5,
+   "got": "[2016年国赛高教杯奖A题]东南大学-系泊系统的设计.pdf#14",
+   "exp": "华北电力大学一等奖水质综合评价及预测 .pdf#16"
+  },
+  {
+   "id": "A06",
+   "first_diff_rank": 4,
+   "got": "基于自适应模拟退火遗传算法的月球软着陆轨道优化.pdf#3",
+   "exp": "基于自适应模拟退火遗传算法的月球软着陆轨道优化.pdf#3"
+  },
+  {
+   "id": "A07",
+   "first_diff_rank": 1,
+   "got": "华中农大特等奖淡水养殖池塘水华发生及池水自净化研究 .pdf#24",
+   "exp": "华中农大特等奖淡水养殖池塘水华发生及池水自净化研究 .pdf#24"
+  },
+  {
+   "id": "A08",
+   "first_diff_rank": 2,
+   "got": "基于改进的神经网络和混沌时间序列预测控制高炉炼铁过程.pdf#13",
+   "exp": "基于改进的神经网络和混沌时间序列预测控制高炉炼铁过程.pdf#13"
+  },
+  {
+   "id": "A09",
+   "first_diff_rank": 1,
+   "got": "常州大学一等奖淡水养殖池塘水华发生及池水自净化研究.pdf#19",
+   "exp": "常州大学一等奖淡水养殖池塘水华发生及池水自净化研究.pdf#19"
+  },
+  {
+   "id": "F02",
+   "first_diff_rank": 10,
+   "got": "B题_建模与求解说明文档.pdf#19",
+   "exp": "B题_建模与求解说明文档.pdf#19"
+  },
+  {
+   "id": "F04",
+   "first_diff_rank": 8,
+   "got": "一类运输问题的建模.pdf#4",
+   "exp": "1一类运输问题的建模.pdf#4"
+  },
+  {
+   "id": "F05",
+   "first_diff_rank": 2,
+   "got": "3零件的参数设计(1).pdf#6",
+   "exp": "零件的参数设计(1).pdf#6"
+  },
+  {
+   "id": "F06",
+   "first_diff_rank": 1,
+   "got": "A题.pdf#2",
+   "exp": "A题.pdf#2"
+  },
+  {
+   "id": "F08",
+   "first_diff_rank": 8,
+   "got": "12一类投资组合问题的建模与分析.pdf#1",
+   "exp": "一类投资组合问题的建模与分析.pdf#1"
+  },
+  {
+   "id": "F09",
+   "first_diff_rank": 2,
+   "got": "长江水质综合评价与预测的数学模型.pdf#15",
+   "exp": "长江水质综合评价与预测的数学模型.pdf#15"
+  },
+  {
+   "id": "F10",
+   "first_diff_rank": 1,
+   "got": "B3617基于粗糙集改进的决策树手机精准营销模型 .pdf#18",
+   "exp": "基于粗糙集改进的决策树手机精准营销模型.pdf#18"
+  },
+  {
+   "id": "S01",
+   "first_diff_rank": 2,
+   "got": "2长江水质的评价和预测.pdf#6",
+   "exp": "长江水质的评价和预测.pdf#6"
+  },
+  {
+   "id": "S02",
+   "first_diff_rank": 4,
+   "got": "A题.pdf#3",
+   "exp": "A题.pdf#3"
+  },
+  {
+   "id": "S03",
+   "first_diff_rank": 3,
+   "got": "一类运输问题的建模1.pdf#1",
+   "exp": "一类运输问题的建模.pdf#1"
+  },
+  {
+   "id": "S04",
+   "first_diff_rank": 2,
+   "got": "A285.pdf#25",
+   "exp": "2012年数学建模A题一等奖论文葡萄酒的评价 .pdf#25"
+  },
+  {
+   "id": "S05",
+   "first_diff_rank": 7,
+   "got": "一类投资组合问题的建模与分析.pdf#0",
+   "exp": "一类投资组合问题的建模与分析.pdf#0"
+  },
+  {
+   "id": "S06",
+   "first_diff_rank": 2,
+   "got": "“露天矿生产的车辆安排”的模型和评述.pdf#1",
+   "exp": "“露天矿生产的车辆安排”的模型和评述.pdf#1"
+  },
+  {
+   "id": "S07",
+   "first_diff_rank": 9,
+   "got": "C题_微网与外部电网电力调控策略_完整建模说明文档_v2.pdf#25",
+   "exp": "C题_微网与外部电网电力调控策略_完整建模说明文档_v2.pdf#25"
+  },
+  {
+   "id": "S10",
+   "first_diff_rank": 1,
+   "got": "钢管的订购和运输.pdf#10",
+   "exp": "钢管的订购和运输.pdf#10"
+  },
+  {
+   "id": "C01",
+   "first_diff_rank": 5,
+   "got": "常州大学一等奖淡水养殖池塘水华发生及池水自净化研究.pdf#44",
+   "exp": "常州大学一等奖.pdf#44"
+  },
+  {
+   "id": "C02",
+   "first_diff_rank": 3,
+   "got": "cumcm0735.pdf#27",
+   "exp": "B447.pdf#23"
+  },
+  {
+   "id": "C03",
+   "first_diff_rank": 5,
+   "got": "测控SARS流行趋势的优化模型.pdf#0",
+   "exp": "测控SARS流行趋势的优化模型.pdf#0"
+  },
+  {
+   "id": "C04",
+   "first_diff_rank": 2,
+   "got": "[2017年国赛高教杯奖B题]华中科技大学-基于聚类分析的双目标优化定价模型.pdf#19",
+   "exp": "[2017年国赛高教杯奖B题]华中科技大学-基于聚类分析的双目标优化定价模型.pdf#19"
+  },
+  {
+   "id": "C05",
+   "first_diff_rank": 1,
+   "got": "B3617基于粗糙集改进的决策树手机精准营销模型 .pdf#7",
+   "exp": "B3617基于粗糙集改进的决策树手机精准营销模型 .pdf#7"
+  },
+  {
+   "id": "C06",
+   "first_diff_rank": 3,
+   "got": "零件的参数设计(1).pdf#2",
+   "exp": "21零件的参数设计(1).pdf#2"
+  },
+  {
+   "id": "C07",
+   "first_diff_rank": 8,
+   "got": "B3617基于粗糙集改进的决策树手机精准营销模型 .pdf#15",
+   "exp": "B3617基于粗糙集改进的决策树手机精准营销模型 .pdf#15"
+  },
+  {
+   "id": "C08",
+   "first_diff_rank": 5,
+   "got": "1一类投资组合问题的建模与分析.pdf#1",
+   "exp": "一类投资组合问题的建模与分析.pdf#1"
+  },
+  {
+   "id": "C09",
+   "first_diff_rank": 4,
+   "got": "cumcm0849—关于高等教育学费评价的标准及建议.PDF#22",
+   "exp": "2008一等奖关于高等教育学费标准的评价及建议 .PDF#22"
+  },
+  {
+   "id": "C10",
+   "first_diff_rank": 2,
+   "got": "唐隽玉，孙雪清，胡文伟.pdf#37",
+   "exp": "B248.pdf#30"
+  }
+ ],
+ "逐题": {
+  "M01": {
+   "category": "建模方法",
+   "identical": true,
+   "first_direct": 1
+  },
+  "M02": {
+   "category": "建模方法",
+   "identical": false,
+   "first_direct": 0
+  },
+  "M03": {
+   "category": "建模方法",
+   "identical": false,
+   "first_direct": 1
+  },
+  "M04": {
+   "category": "建模方法",
+   "identical": true,
+   "first_direct": 1
+  },
+  "M05": {
+   "category": "建模方法",
+   "identical": false,
+   "first_direct": 1
+  },
+  "M06": {
+   "category": "建模方法",
+   "identical": false,
+   "first_direct": 0
+  },
+  "M07": {
+   "category": "建模方法",
+   "identical": true,
+   "first_direct": 0
+  },
+  "M08": {
+   "category": "建模方法",
+   "identical": false,
+   "first_direct": 0
+  },
+  "M09": {
+   "category": "建模方法",
+   "identical": true,
+   "first_direct": 2
+  },
+  "M10": {
+   "category": "建模方法",
+   "identical": false,
+   "first_direct": 0
+  },
+  "A01": {
+   "category": "算法",
+   "identical": true,
+   "first_direct": 0
+  },
+  "A02": {
+   "category": "算法",
+   "identical": false,
+   "first_direct": 0
+  },
+  "A03": {
+   "category": "算法",
+   "identical": true,
+   "first_direct": 0
+  },
+  "A04": {
+   "category": "算法",
+   "identical": false,
+   "first_direct": 5
+  },
+  "A05": {
+   "category": "算法",
+   "identical": false,
+   "first_direct": 0
+  },
+  "A06": {
+   "category": "算法",
+   "identical": false,
+   "first_direct": 0
+  },
+  "A07": {
+   "category": "算法",
+   "identical": false,
+   "first_direct": 0
+  },
+  "A08": {
+   "category": "算法",
+   "identical": false,
+   "first_direct": 7
+  },
+  "A09": {
+   "category": "算法",
+   "identical": false,
+   "first_direct": 1
+  },
+  "A10": {
+   "category": "算法",
+   "identical": true,
+   "first_direct": 0
+  },
+  "F01": {
+   "category": "公式与数学关系",
+   "identical": true,
+   "first_direct": 5
+  },
+  "F02": {
+   "category": "公式与数学关系",
+   "identical": false,
+   "first_direct": 3
+  },
+  "F03": {
+   "category": "公式与数学关系",
+   "identical": true,
+   "first_direct": 0
+  },
+  "F04": {
+   "category": "公式与数学关系",
+   "identical": false,
+   "first_direct": 0
+  },
+  "F05": {
+   "category": "公式与数学关系",
+   "identical": false,
+   "first_direct": 0
+  },
+  "F06": {
+   "category": "公式与数学关系",
+   "identical": false,
+   "first_direct": 1
+  },
+  "F07": {
+   "category": "公式与数学关系",
+   "identical": true,
+   "first_direct": 0
+  },
+  "F08": {
+   "category": "公式与数学关系",
+   "identical": false,
+   "first_direct": 0
+  },
+  "F09": {
+   "category": "公式与数学关系",
+   "identical": false,
+   "first_direct": 0
+  },
+  "F10": {
+   "category": "公式与数学关系",
+   "identical": false,
+   "first_direct": 1
+  },
+  "S01": {
+   "category": "相似赛题",
+   "identical": false,
+   "first_direct": 1
+  },
+  "S02": {
+   "category": "相似赛题",
+   "identical": false,
+   "first_direct": 7
+  },
+  "S03": {
+   "category": "相似赛题",
+   "identical": false,
+   "first_direct": 2
+  },
+  "S04": {
+   "category": "相似赛题",
+   "identical": false,
+   "first_direct": 0
+  },
+  "S05": {
+   "category": "相似赛题",
+   "identical": false,
+   "first_direct": 0
+  },
+  "S06": {
+   "category": "相似赛题",
+   "identical": false,
+   "first_direct": 2
+  },
+  "S07": {
+   "category": "相似赛题",
+   "identical": false,
+   "first_direct": 0
+  },
+  "S08": {
+   "category": "相似赛题",
+   "identical": true,
+   "first_direct": 3
+  },
+  "S09": {
+   "category": "相似赛题",
+   "identical": true,
+   "first_direct": 6
+  },
+  "S10": {
+   "category": "相似赛题",
+   "identical": false,
+   "first_direct": 0
+  },
+  "C01": {
+   "category": "综合",
+   "identical": false,
+   "first_direct": 0
+  },
+  "C02": {
+   "category": "综合",
+   "identical": false,
+   "first_direct": 2
+  },
+  "C03": {
+   "category": "综合",
+   "identical": false,
+   "first_direct": 0
+  },
+  "C04": {
+   "category": "综合",
+   "identical": false,
+   "first_direct": 0
+  },
+  "C05": {
+   "category": "综合",
+   "identical": false,
+   "first_direct": 0
+  },
+  "C06": {
+   "category": "综合",
+   "identical": false,
+   "first_direct": 0
+  },
+  "C07": {
+   "category": "综合",
+   "identical": false,
+   "first_direct": 1
+  },
+  "C08": {
+   "category": "综合",
+   "identical": false,
+   "first_direct": 0
+  },
+  "C09": {
+   "category": "综合",
+   "identical": false,
+   "first_direct": 0
+  },
+  "C10": {
+   "category": "综合",
+   "identical": false,
+   "first_direct": 0
+  }
+ }
+}

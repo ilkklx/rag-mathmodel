@@ -1,7 +1,7 @@
 # AGENT_GUIDE —— 给 AI Agent 的调用说明
 
 > 本文件写给**另一个 AI Agent**，不是写给普通用户。目标：你在不了解本项目历史的情况下，读完就能正确调用、正确引用、不误用。
-> 版本：RAG-MathModel v1.0.1｜检索算法：Baseline V2 + 空词法查询补救
+> 版本：RAG-MathModel v1.0.2｜检索算法：Baseline V2 + 空词法查询补救
 
 ---
 
@@ -41,7 +41,7 @@
 
 ```python
 import sys, os
-sys.path.insert(0, r"E:\数学建模资源库\rag\src")   # 资源包根目录下的 src
+sys.path.insert(0, r"D:/rag/src")   # 将 D:/rag 替换为自己的项目目录
 from rag import retrieve
 
 out = retrieve("遗传算法适合什么类型的数学建模问题", top_k=10)
@@ -52,7 +52,7 @@ for r in out["results"]:
 ### 4.2 CLI（无法 import 时用）
 
 ```bash
-cd E:\数学建模资源库\rag
+cd D:/rag
 python query.py "遗传算法适合什么类型的数学建模问题" --top-k 10 --json
 ```
 
@@ -80,7 +80,7 @@ python scripts/check.py      # 期望末行 RAG STATUS: READY
 |------|------|----------|
 | `rank` | 名次（1 起） | 越小越靠前；**不代表越正确** |
 | `score` | RRF 融合分（非概率、不可当相似度百分比） | 只用于看两路召回的相对强弱 |
-| `path` | 原文的**原始绝对路径** | 引用时必须保留 |
+| `path` | 原文的**逻辑来源路径** | 引用时必须保留 |
 | `chunk_id` | 形如 `文件名.pdf#页码` 的块号 | 引用时必须保留（与 `path` 一起才唯一） |
 | `title` | 文件名 | 显示用 |
 | `year` / `problem` / `section` | 元数据（可能为空） | 用于筛选/排序，为空不要臆测 |

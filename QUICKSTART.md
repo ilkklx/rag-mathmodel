@@ -8,7 +8,7 @@
 ## 1. 自检（约 30 秒，首次会加载模型）
 
 ```bash
-cd E:\数学建模资源库\rag
+cd D:/rag
 python scripts/check.py
 ```
 
@@ -20,8 +20,8 @@ RAG STATUS: READY
 
 若出现 `[FAIL]`，按其 `Fix:` 提示处理；常见两种：
 
-- **模型缺失** → 确认 `models/fastembed/` 存在（约 91 MB / 9 个文件），或改 `config/config.yaml` 的 `model.cache_dir`；
-- **原文打不开**（仅提示、不阻塞）→ 在 `config.yaml` 的 `paths.library_roots` 填本机语料目录。
+- **模型缺失** → 确认 `models/fastembed/` 存在（约 91 MB / 9 个文件），或改 `config/config.local.yaml` 的 `model.cache_dir`；
+- **原文打不开**（仅提示、不阻塞）→ 在 `config/config.local.yaml` 的 `paths.library_roots` 填本机语料目录。
 
 ## 2. 查一条
 
@@ -60,5 +60,5 @@ python scripts/verify.py             # 文件完整性（对照 manifests/sha256
 |------|------|------|
 | `ModuleNotFoundError: rag` | 没把 `src` 加进 `sys.path` | 用 `query.py`，或 `sys.path.insert(0, "<包根>/src")` |
 | 模型下载/联网卡住 | `local_files_only: false` | 改回 `true`（模型已在包内） |
-| `原文: （未配置 library_roots…）` | 未配置语料根 | 编辑 `config/config.yaml` |
+| `原文: （未配置 library_roots…）` | 未配置语料根 | 编辑 `config/config.local.yaml` |
 | 结果里 `section`/`year` 为空 | 该 chunk 元数据缺失 | 属已知问题，不影响出处追溯 |

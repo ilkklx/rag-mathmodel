@@ -11,7 +11,7 @@ import time
 ROOT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
-SKIP_DIRS = {"__pycache__", ".git", "manifests"}
+SKIP_DIRS = {"__pycache__", ".git", "manifests", ".private-review"}
 SKIP_EXT = {".pyc", ".pyo"}
 HISTORICAL = {
     "说明": "原项目（数学建模 RAG Phase 6）的冻结产物哈希，独立于本交付包，仅作溯源用",
@@ -34,6 +34,8 @@ def main():
         dirs[:] = [d for d in dirs if d not in SKIP_DIRS]
         for fn in fs:
             if os.path.splitext(fn)[1].lower() in SKIP_EXT:
+                continue
+            if fn in {'config.local.yaml', 'DELIVERY_REPORT.md'} or fn.startswith('.env'):
                 continue
             p = os.path.join(r, fn)
             rel = os.path.relpath(p, ROOT).replace("\\", "/")

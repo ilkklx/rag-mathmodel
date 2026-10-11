@@ -38,6 +38,7 @@ def _merge(base, over):
 def load(path=None):
     """读 config/config.yaml（不存在则 config.example.yaml），与默认值合并。"""
     cands = [path] if path else [
+        os.path.join(ROOT, "config", "config.local.yaml"),
         os.path.join(ROOT, "config", "config.yaml"),
         os.path.join(ROOT, "config", "config.example.yaml"),
     ]

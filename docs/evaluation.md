@@ -1,6 +1,25 @@
 # 评测
 
-## 当前版本 v1.0.1
+## 当前版本 v1.0.2
+
+此版本将来源路径改为逻辑编号，并对含路径的文本做脱敏；118 条受影响文本同步更新离线向量。GT-50 已重新运行，报告为 manifests/eval_v1_0_2_result.json。
+
+| 指标 | v1.0.2 |
+|---|---:|
+| 与原始冻结快照排序一致 | 12/50 |
+| DirectHit@5 | 0.34 |
+| DirectHit@10 | 0.4 |
+| MRR@10 | 0.2504 |
+| 内容标签覆盖率 | 476/500 |
+
+脱敏后的排序有变化；DirectHit@10 保持 0.40，不据此宣称质量提升。下面保留旧版本的历史评测数字。需要重跑当前版本时使用：
+
+```bash
+python -B scripts/eval_gt50.py --allow-baseline-diff --output manifests/eval_v1_0_2_result.json
+```
+
+
+## 历史版本 v1.0.1
 
 2026-10-10 用相同 GT-50 重跑，当前报告为 `manifests/eval_v1_0_1_result.json`。原始冻结快照和 `eval_gt50_result.json` 保留为 v1.0.0 历史记录，不覆盖。
 

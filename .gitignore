@@ -4,3 +4,9 @@ miniprogram_npm/
 Thumbs.db
 __pycache__/
 *.pyc
+config/config.local.yaml
+.env
+.env.*
+!.env.example
+.private-review/
+DELIVERY_REPORT.md

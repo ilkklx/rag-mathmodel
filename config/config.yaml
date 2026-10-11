@@ -1,33 +1,26 @@
-# RAG-MathModel 实际配置（本机）
-# 相对路径一律相对「资源包根目录」解析（即本文件的上上级目录）。
+# Fill your own source directories in config.local.yaml; examples use D:/rag.
 package:
   name: RAG-MathModel
-  version: 1.0.1
-
+  version: 1.0.2
 index:
   db: data/index/mvp.db
   vectors: data/index/vectors.npy
-
 model:
   name: BAAI/bge-small-zh-v1.5
   cache_dir: models/fastembed
-  local_files_only: true      # 只用包内模型，不联网下载
-
+  local_files_only: true
 retrieval:
-  rewrite_scheme: B           # Baseline V2 采用 Scheme-B（规范化 + 术语切分）
+  rewrite_scheme: B
   pool: 50
   topk: 10
-  recall_multiplier: 2        # 每路召回深度 = pool * 2 = 100
+  recall_multiplier: 2
   rrf_k: 60
-
-# 原文定位：把索引里的原始路径前缀映射到「你机器上的语料根目录」。
-# 换机器时只改这里；不改则 resolved_path=null、exists=false（索引仍可用，只是打不开原文）。
 paths:
   source_map: data/metadata/source_map.json
   library_roots:
-    ROOT1: E:\数学建模资源库\02_按模型分类论文库
-    ROOT2: E:\数学建模资源库\01_综合资料库
-    ROOT3: E:\数学建模资源库\04_往年国赛题解与源码
-    ROOT4: F:\competition\数学建模省赛
-    ROOT5: E:\数学建模资源库\07_2026赛题参考（低可信度）
-    ROOT6: E:\数学建模资源库\10_作者心得与经验分享
+    ROOT1: ''
+    ROOT2: ''
+    ROOT3: ''
+    ROOT4: ''
+    ROOT5: ''
+    ROOT6: ''
